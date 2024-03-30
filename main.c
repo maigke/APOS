@@ -32,7 +32,12 @@
 #include "include/info.h"
 #include "include/args.h"
 
-char txt[2048];
+char txt[4096]; //Se amplia el valor de las dimensiones del archivo
+/*
+sprintf quien hace uso de este buff debe ser ampliado, ya que,
+bajo las condiciones actuales, no alcanza con las dimensiones
+que han sido especificadas.
+*/
 
 void create_makefile(options_t *options) ;
 void create_mainfile(options_t *options);
